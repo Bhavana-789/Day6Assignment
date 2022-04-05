@@ -7,30 +7,32 @@ namespace Day6_Assignment
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Logical programming");
-            //UC2_PerfectNumber
-            Console.WriteLine("Welcome to perfect number Program");
-            int temp, sum = 0;
-            Console.Write("enter the Number");
+            //UC3_PrimeNumber
+            Console.WriteLine("Welcome to prime number Program");
+            Console.WriteLine("Enter a Number to Check prime or not: ");
             int num = int.Parse(Console.ReadLine());
-            temp = num;
-            for (int i = 1; i < num; i++)
+            int count = 0;
+            for (int i = 1; i <= num; i++)
             {
                 if (num % i == 0)
                 {
-                    sum = sum + i;
+                    count++;
                 }
             }
-            if (sum == temp)
+            if (count == 2)
             {
-                Console.WriteLine("Entered number " + num + " is a perfect number");
+                Console.WriteLine("Enetred Number " + num + " Is a prime number");
             }
             else
             {
-                Console.WriteLine("Entered number is not a perfect number");
+                Console.WriteLine("Not a prime number");
             }
+            Console.ReadLine();
+
         }
     }
 }
+
         
    
 
