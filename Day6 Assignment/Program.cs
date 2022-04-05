@@ -7,27 +7,20 @@ namespace Day6_Assignment
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Logical programming");
-            //UC3_PrimeNumber
-            Console.WriteLine("Welcome to prime number Program");
-            Console.WriteLine("Enter a Number to Check prime or not: ");
+            //UC4_PrimeNumber
+            Console.WriteLine("Welcome to reverse number Program");
+            Console.WriteLine("Enter a number");
             int num = int.Parse(Console.ReadLine());
-            int count = 0;
-            for (int i = 1; i <= num; i++)
+            int temp, rem, rev = 0;
+            temp = num;
+            while (num > 0)
             {
-                if (num % i == 0)
-                {
-                    count++;
-                }
+                rem = num % 10;
+                rev = ((rev * 10) + rem);
+                num = num / 10;
             }
-            if (count == 2)
-            {
-                Console.WriteLine("Enetred Number " + num + " Is a prime number");
-            }
-            else
-            {
-                Console.WriteLine("Not a prime number");
-            }
-            Console.ReadLine();
+
+            Console.WriteLine("Reverse of the number " + temp + " is: " + rev);
 
         }
     }
