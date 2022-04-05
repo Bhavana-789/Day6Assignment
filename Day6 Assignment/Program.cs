@@ -7,19 +7,32 @@ namespace Day6_Assignment
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Logical programming");
-            int num1 = 0, num2 = 1, temp, i, number;
-            Console.Write("Enter the number of elements: ");
-            number = int.Parse(Console.ReadLine());
-            Console.Write(num1 + " " + num2 + " ");
-            for (i = 2; i < number; ++i)
+            //UC2_PerfectNumber
+            Console.WriteLine("Welcome to perfect number Program");
+            int temp, sum = 0;
+            Console.Write("enter the Number");
+            int num = int.Parse(Console.ReadLine());
+            temp = num;
+            for (int i = 1; i < num; i++)
             {
-                temp = num1 + num2;
-                Console.Write(temp + " ");
-                num1 = num2;
-                num2 = temp;
+                if (num % i == 0)
+                {
+                    sum = sum + i;
+                }
+            }
+            if (sum == temp)
+            {
+                Console.WriteLine("Entered number " + num + " is a perfect number");
+            }
+            else
+            {
+                Console.WriteLine("Entered number is not a perfect number");
             }
         }
     }
 }
+        
+   
+
     
 
